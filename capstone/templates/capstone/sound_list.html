@@ -1,0 +1,9 @@
+<!-- tunr/templates/tunr/song_list.html -->
+<h2>Sound</h2>
+<ul>
+    {% for sound in sounds %}
+    <li>
+        <a href="{% url 'sound_detail' pk=sound.pk %}">{{ sound.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
