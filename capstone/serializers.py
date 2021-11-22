@@ -17,6 +17,10 @@ class SoundSerializer(serializers.HyperlinkedModelSerializer):
         # many=False,
         read_only=True
     )
+    artist_id=serializers.PrimaryKeyRelatedField(
+        queryset=Artist.objects.all(),
+        source='artist'
+    )
     class Meta:
        model = Sound 
-       fields = ('id', 'artist', 'photo_url', 'title', 'album', 'photo_url',)
+       fields = ('id', 'artist', 'photo_url', 'title', 'album', 'photo_url', 'artist_id',)
