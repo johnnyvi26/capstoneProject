@@ -1,0 +1,19 @@
+<!-- capstone/templates/tunr/base.html -->
+{% load static %}
+<html>
+
+<head>
+    <title>capstone</title>
+    <link rel="stylesheet" href="{% static 'css/capstone.css' %}" />
+</head>
+
+<body>
+    <h1>capstone</h1>
+    <nav>
+        <a href="/sounds">Sounds/a>
+        <a href="/">Artists</a>
+    </nav>
+    {% block content %} {% endblock %}
+</body>
+
+</html>

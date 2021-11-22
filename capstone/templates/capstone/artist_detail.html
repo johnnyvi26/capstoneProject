@@ -1,10 +1,12 @@
 <!-- tunr/templates/tunr/artist_detail.html -->
-<h2>{{ artist.name }} <a href="">(edit)</a></h2>
+<h2>{{ artist.name }} <a href="{% url 'artist_edit' pk=artist.pk %}">(edit)</a></h2>
 <h4>{{ artist.nationality }}</h4>
 
 <img src="{{ artist.photo_url }}" alt="" class="artist-photo" />
 
-<h3>Songs <a href="">(+)</a></h3>
+<a href="{% url 'artist_delete' pk=artist.pk %}">Delete</a>
+
+<h3>Songs <a href="{% url 'sound_create' %}">(+)</a></h3>
 <ul>
     {% for sound in artist.sounds.all %}
     <li>

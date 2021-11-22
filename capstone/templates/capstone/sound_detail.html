@@ -1,4 +1,4 @@
-<h2>{{ sound.title }} <a href="">(edit)</a></h2>
+<a href="{% url 'sound_delete' pk=sound.pk %}">Delete</a>
+<h2>{{ sound.title }} <a href="{% url 'sound_edit' pk=sound.pk %}">(edit)</a></h2>
 <h3>By: {{ sound.artist.name }}</h3>
-
 Album: {{ sound.album }}
